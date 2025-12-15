@@ -165,7 +165,7 @@ def render_header():
             )
             st.markdown(
                 '<div class="app-subtitle">'
-                'Monitoramento centralizado de G1, CNN Brasil, R7, com filtros por UF, mídia e data.'
+                'Monitoramento centralizado'
                 '</div>',
                 unsafe_allow_html=True,
             )
