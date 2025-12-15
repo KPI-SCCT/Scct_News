@@ -71,20 +71,37 @@ def export_news_to_csv() -> int:
 
 def git_commit_and_push(file_path: Path, message: str = "Atualiza export de notícias para dashboard"):
     """
-    Opcional: faz git add/commit/push do CSV.
-    Pressupõe que o repositório já está configurado com origin e credenciais salvas.
+    Executa git add/commit/push do arquivo informado.
+
+    - Se não houver alterações (nothing to commit), não levanta erro.
+    - Pressupõe que o repositório já está configurado com origin e credenciais salvas.
     """
-    def run(cmd: str):
-        subprocess.run(cmd, cwd=str(REPO_ROOT), check=True, shell=True)
+    def run(cmd: str, check: bool = True, capture_output: bool = False):
+        return subprocess.run(
+            cmd,
+            cwd=str(REPO_ROOT),
+            check=check,
+            shell=True,
+            capture_output=capture_output,
+            text=True,
+        )
 
     try:
+        # Adiciona o arquivo
         run(f'git add "{file_path.as_posix()}"')
+
+        # Verifica se há algo para commitar
+        status = run("git status --porcelain", check=False, capture_output=True)
+        if not status.stdout.strip():
+            print("[export_for_streamlit] Nenhuma alteração detectada; commit/push ignorados.")
+            return
+
+        # Só faz commit se houver mudanças
         run(f'git commit -m "{message}"')
         run("git push")
         print("[export_for_streamlit] Commit e push executados com sucesso.")
     except subprocess.CalledProcessError as e:
         print(f"[export_for_streamlit] Falha ao executar git: {e}")
-
 
 def export_news_to_csv_and_push():
     count = export_news_to_csv()
