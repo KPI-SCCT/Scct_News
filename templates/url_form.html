@@ -1,0 +1,101 @@
+<!-- templates/url_form.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ form_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div>
+            <h1>{{ form_title }}</h1>
+            <p class="subtitle">Defina a URL, mídia e UF a serem monitoradas.</p>
+        </div>
+        <div class="header-actions">
+            <a href="{{ url_for('url_list') }}" class="btn btn-secondary">
+                ← Voltar à lista
+            </a>
+        </div>
+    </header>
+
+    <section class="card">
+        <form method="post" class="url-form">
+            <div class="filter-group">
+                <label for="url">URL</label>
+                <input
+                    type="url"
+                    id="url"
+                    name="url"
+                    required
+                    value="{{ url_obj.url if url_obj else '' }}"
+                    placeholder="https://g1.globo.com"
+                />
+            </div>
+
+            <div class="filter-group">
+                <label for="media">Mídia</label>
+                <input
+                    list="media-options"
+                    id="media"
+                    name="media"
+                    value="{{ url_obj.media if url_obj else '' }}"
+                    placeholder="Ex.: G1, CNN Brasil, R7"
+                />
+                <datalist id="media-options">
+                    {% for m in media_suggestions %}
+                        <option value="{{ m }}"></option>
+                    {% endfor %}
+                </datalist>
+                <small class="hint">
+                    Se vazio, será inferido pela URL (g1.globo.com → G1, cnnbrasil.com.br → CNN Brasil, etc.).
+                </small>
+            </div>
+
+            <div class="filter-group">
+                <label for="uf">UF</label>
+                <select id="uf" name="uf">
+                    <option value="NONE">Sem UF específica</option>
+                    {% for uf_value, uf_name in uf_list %}
+                        <option value="{{ uf_value }}"
+                            {% if url_obj and url_obj.uf == uf_value %}selected{% endif %}>
+                            {{ uf_value }} - {{ uf_name }}
+                        </option>
+                    {% endfor %}
+                </select>
+                <small class="hint">
+                    Para G1/CNN, também pode ser inferido pela URL (ex.: /sp, /al). Para R7, usamos o slug do estado.
+                </small>
+            </div>
+
+            <div class="filter-group">
+                <label for="city">Cidade (opcional)</label>
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    value="{{ url_obj.city if url_obj else '' }}"
+                    placeholder="Ex.: São Paulo"
+                />
+            </div>
+
+            <div class="filter-group">
+                <label>
+                    <input
+                        type="checkbox"
+                        name="is_active"
+                        {% if not url_obj or url_obj.is_active %}checked{% endif %}
+                    />
+                    Monitorar esta URL (ativa)
+                </label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">{{ submit_label }}</button>
+            </div>
+        </form>
+    </section>
+</div>
+</body>
+</html>

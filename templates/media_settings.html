@@ -1,0 +1,60 @@
+<!-- templates/media_settings.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Configurar Mídias Monitoradas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div>
+            <h1>Configurar Mídias Monitoradas</h1>
+            <p class="subtitle">Ative ou desative quais veículos deseja monitorar.</p>
+        </div>
+        <div class="header-actions">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                ← Voltar ao monitor
+            </a>
+        </div>
+    </header>
+
+    <section class="card">
+        <form method="post" class="media-settings-form">
+            <table class="media-table">
+                <thead>
+                    <tr>
+                        <th>Mídia</th>
+                        <th>URLs ativas</th>
+                        <th>Monitorar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for media in medias %}
+                        <tr>
+                            <td>{{ media.name }}</td>
+                            <td>{{ media.active_count }}</td>
+                            <td class="text-center">
+                                <input
+                                    type="checkbox"
+                                    name="media"
+                                    value="{{ media.name }}"
+                                    {% if media.active %}checked{% endif %}
+                                />
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    Salvar configurações
+                </button>
+            </div>
+        </form>
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Monitor de Notícias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div>
+            <h1>Monitor de Notícias</h1>
+            <!-- <p class="subtitle">G1, CNN Brasil, R7 – filtragem por UF, mídia e data</p> -->
+        </div>
+        <div class="header-actions">
+            <nav class="header-nav">
+                <a href="{{ url_for('index') }}" class="nav-link nav-link-active">Monitor</a>
+                <a href="{{ url_for('url_list') }}" class="nav-link">URLs monitoradas</a>
+                <a href="{{ url_for('keywords') }}" class="nav-link">Palavras-chave</a>
+                <a href="{{ url_for('media_settings') }}" class="nav-link">Mídias</a>
+            </nav>
+            <!-- <form method="post" action="{{ url_for('run_monitor') }}">
+                <button type="submit" class="btn btn-primary">Rodar monitor agora</button>
+            </form> -->
+        </div>
+    </header>
+
+    {% if monitor_msg %}
+        <div class="alert alert-success">
+            {{ monitor_msg }}
+        </div>
+    {% endif %}
+
+    <section class="filters-panel">
+        <form method="get" class="filters-form">
+            <div class="filter-group">
+                <label for="uf">UF</label>
+                <select name="uf" id="uf">
+                    <option value="TODOS" {% if selected_uf == "TODOS" or not selected_uf %}selected{% endif %}>
+                        Todos os Estados
+                    </option>
+                    {% for uf_value, uf_name in uf_list %}
+                        <option value="{{ uf_value }}" {% if uf_value == selected_uf %}selected{% endif %}>
+                            {{ uf_value }} - {{ uf_name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="media">Mídia</label>
+                <select name="media" id="media">
+                    <option value="">Todas</option>
+                    {% for media_option in medias %}
+                        <option value="{{ media_option }}" {% if media_option == selected_media %}selected{% endif %}>
+                            {{ media_option }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="date">Data da reportagem</label>
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    value="{{ selected_date or '' }}"
+                    title="Selecione uma data no calendário"
+                />
+            </div>
+
+            <div class="filter-actions">
+                <!-- <button type="submit" class="btn btn-primary">Aplicar filtros</button> -->
+                <a href="{{ url_for('index') }}" class="btn btn-ghost">Limpar filtros</a>
+                <a
+                    href="{{ url_for(
+                        'export_news',
+                        uf=selected_uf if selected_uf and selected_uf != 'TODOS' else None,
+                        media=selected_media,
+                        date=selected_date
+                    ) }}"
+                    class="btn btn-secondary"
+                >
+                    Exportar CSV
+                </a>
+            </div>
+        </form>
+    </section>
+
+    <section class="results">
+        <h2 class="results-title">
+            Resultados
+            <span class="results-count">(mostrando {{ news_list|length }} de {{ total_count }} notícias)</span>
+        </h2>
+
+        {% if news_list|length == 0 %}
+            <p class="no-results">Nenhuma notícia encontrada para os filtros atuais.</p>
+        {% else %}
+            <div class="news-grid">
+                {% for news in news_list %}
+                    <article class="news-card">
+                        <header class="news-card-header">
+                            <div class="news-meta-left">
+                                <span class="news-date">
+                                    {% if news.published_at %}
+                                        {{ news.published_at.strftime('%d/%m/%Y') }}
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </span>
+                                <span class="news-time">
+                                    {% if news.published_at %}
+                                        {{ news.published_at.strftime('%H:%M') }}
+                                    {% else %}
+                                        --
+                                    {% endif %}
+                                </span>
+                            </div>
+                            <div class="news-meta-right">
+                                {% if news.source %}
+                                    <span class="chip chip-media">{{ news.source }}</span>
+                                {% endif %}
+                                {% if news.uf %}
+                                    <span class="chip chip-uf">{{ news.uf }}</span>
+                                {% endif %}
+                            </div>
+                        </header>
+
+                        <h3 class="news-title">
+                            <a href="{{ news.url }}" target="_blank">
+                                {{ news.title }}
+                            </a>
+                        </h3>
+
+                        {% if news.summary %}
+                            <p class="news-summary">
+                                {{ news.summary }}
+                            </p>
+                        {% endif %}
+
+                        <footer class="news-footer">
+                            <span class="news-location">
+                                {% if news.city and news.uf %}
+                                    {{ news.city }} - {{ news.uf }}
+                                {% elif news.uf %}
+                                    {{ news.uf }}
+                                {% else %}
+                                    Local não informado
+                                {% endif %}
+                            </span>
+                        </footer>
+                    </article>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </section>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.filters-form');
+    if (!form) return;
+
+    const inputs = form.querySelectorAll('select, input[type="date"], input[type="text"]');
+    let timeoutId = null;
+
+    function autoSubmit() {
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        timeoutId = setTimeout(function () {
+            form.submit();
+        }, 400);
+    }
+
+    inputs.forEach(function (el) {
+        el.addEventListener('change', autoSubmit);
+        el.addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                autoSubmit();
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

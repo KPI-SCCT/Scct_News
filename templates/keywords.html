@@ -1,0 +1,86 @@
+<!-- templates/keywords.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Palavras-chave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div>
+            <h1>Palavras-chave</h1>
+            <p class="subtitle">
+                Defina termos para filtrar as notícias. Se não houver termos ativos, todas as notícias são consideradas.
+            </p>
+        </div>
+        <div class="header-actions">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                ← Voltar ao monitor
+            </a>
+        </div>
+    </header>
+
+    <section class="card">
+        <form method="post" class="media-settings-form">
+            <div class="filter-group">
+                <label for="term">Nova palavra-chave</label>
+                <input
+                    type="text"
+                    id="term"
+                    name="term"
+                    placeholder="Ex.: CNH, ventania, julgamento"
+                />
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    Adicionar
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <section class="card" style="margin-top: 16px;">
+        {% if keywords|length == 0 %}
+            <p class="no-results">Nenhuma palavra-chave cadastrada.</p>
+        {% else %}
+            <table class="media-table">
+                <thead>
+                    <tr>
+                        <th>Termo</th>
+                        <th>Ativa</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for kw in keywords %}
+                        <tr>
+                            <td>{{ kw.term }}</td>
+                            <td>{{ 'Sim' if kw.is_active else 'Não' }}</td>
+                            <td class="text-right">
+                                <form method="post"
+                                      action="{{ url_for('keyword_toggle', kw_id=kw.id) }}"
+                                      style="display:inline">
+                                    <button type="submit" class="btn btn-secondary btn-small">
+                                        {{ 'Desativar' if kw.is_active else 'Ativar' }}
+                                    </button>
+                                </form>
+                                <form method="post"
+                                      action="{{ url_for('keyword_delete', kw_id=kw.id) }}"
+                                      style="display:inline"
+                                      onsubmit="return confirm('Deseja excluir esta palavra-chave?');">
+                                    <button type="submit" class="btn btn-ghost btn-small">
+                                        Excluir
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </section>
+</div>
+</body>
+</html>

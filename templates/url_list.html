@@ -1,0 +1,70 @@
+<!-- templates/url_list.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>URLs Monitoradas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div>
+            <h1>URLs Monitoradas</h1>
+            <p class="subtitle">Gerencie as URLs que o sistema monitora em cada mídia.</p>
+        </div>
+        <div class="header-actions">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                ← Voltar ao monitor
+            </a>
+            <a href="{{ url_for('url_new') }}" class="btn btn-primary">
+                + Nova URL
+            </a>
+        </div>
+    </header>
+
+    <section class="card">
+        {% if urls|length == 0 %}
+            <p class="no-results">Nenhuma URL cadastrada.</p>
+        {% else %}
+            <table class="media-table">
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Mídia</th>
+                        <th>UF</th>
+                        <th>Cidade</th>
+                        <th>Ativa</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in urls %}
+                        <tr>
+                            <td><a href="{{ u.url }}" target="_blank">{{ u.url }}</a></td>
+                            <td>{{ u.media }}</td>
+                            <td>{{ u.uf or '--' }}</td>
+                            <td>{{ u.city or '--' }}</td>
+                            <td>{{ 'Sim' if u.is_active else 'Não' }}</td>
+                            <td class="text-right">
+                                <a href="{{ url_for('url_edit', url_id=u.id) }}" class="btn btn-secondary btn-small">
+                                    Editar
+                                </a>
+                                <form method="post"
+                                      action="{{ url_for('url_delete', url_id=u.id) }}"
+                                      style="display:inline"
+                                      onsubmit="return confirm('Deseja realmente excluir esta URL?');">
+                                    <button type="submit" class="btn btn-ghost btn-small">
+                                        Excluir
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </section>
+</div>
+</body>
+</html>
