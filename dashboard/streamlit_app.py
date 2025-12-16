@@ -144,22 +144,25 @@ def inject_custom_css():
         }
 
         /* ---------- CARD DE FILTROS ---------- */
-        /* st.container(border=True) -> wrapper com borda padrão do Streamlit */
-        div[data-testid="stVerticalBlockBorderWrapper"] {
-            background: #ffffff !important;
-            border-radius: 12px !important;
-            padding: 0.9rem 1.1rem 0.6rem 1.1rem !important;
-            border-left: 4px solid #4D148C !important;  /* faixa roxa à esquerda */
-            border: 1px solid rgba(77,20,140,0.08) !important;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.05) !important;
+        /* Apenas o VerticalBlock cujo FILHO imediato é um ElementContainer
+           que contém .filter-title (ou seja, o bloco de filtros) */
+        div[data-testid="stVerticalBlock"]:has(> div[data-testid="stElementContainer"] .filter-title) {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.2rem 1.4rem 0.8rem 1.4rem;
+            border: 1px solid rgba(77,20,140,0.08);   /* borda geral suave */
+            border-left: 4px solid #4D148C;           /* faixa roxa só no card */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            margin-bottom: 1rem;
         }
 
-        /* Remove qualquer borda extra interna que o Streamlit coloque dentro do wrapper */
-        div[data-testid="stVerticalBlockBorderWrapper"] > div {
-            border: none !important;
-            padding: 0 !important;
-            background: transparent !important;
+        .filter-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #4D148C;
+            margin-bottom: 0.6rem;
         }
+        /* ------------------------------------- */
 
         /* Labels dos filtros */
         label[data-testid="stMetricLabel"] {
@@ -223,45 +226,42 @@ def main():
 
     # --------- Filtros em card ---------
     with st.container():
-        filter_box = st.container(border=True)  # este é o retângulo branco
 
-        with filter_box:
-            # Título do card
-            st.markdown(
-                '<div class="filter-title">Filtros</div>',
-                unsafe_allow_html=True,
+        st.markdown(
+            '<div class="filter-title">Filtros</div>',
+            unsafe_allow_html=True,
+        )
+
+        col1, col2, col3 = st.columns(3)
+
+        # UF
+        with col1:
+            uf_options = ["TODOS"] + sorted(
+                [u for u in df["uf"].unique() if isinstance(u, str) and u.strip()]
             )
+            uf_selected = st.selectbox("UF", uf_options, index=0, key="uf_filter")
 
-            col1, col2, col3 = st.columns(3)
+        # Mídia
+        with col2:
+            media_options = ["TODAS"] + sorted(
+                [m for m in df["source"].unique() if isinstance(m, str) and m.strip()]
+            )
+            media_selected = st.selectbox("Mídia", media_options, index=0, key="media_filter")
 
-            # UF
-            with col1:
-                uf_options = ["TODOS"] + sorted(
-                    [u for u in df["uf"].unique() if isinstance(u, str) and u.strip()]
+        # Data
+        with col3:
+            all_dates = df["data"].dropna().unique()
+            all_dates_sorted = sorted(all_dates)
+            if all_dates_sorted:
+                date_selected = st.date_input(
+                    "Data da reportagem",
+                    value=None,
+                    min_value=min(all_dates_sorted),
+                    max_value=max(all_dates_sorted),
+                    key="date_filter",
                 )
-                uf_selected = st.selectbox("UF", uf_options, index=0, key="uf_filter")
-
-            # Mídia
-            with col2:
-                media_options = ["TODAS"] + sorted(
-                    [m for m in df["source"].unique() if isinstance(m, str) and m.strip()]
-                )
-                media_selected = st.selectbox("Mídia", media_options, index=0, key="media_filter")
-
-            # Data
-            with col3:
-                all_dates = df["data"].dropna().unique()
-                all_dates_sorted = sorted(all_dates)
-                if all_dates_sorted:
-                    date_selected = st.date_input(
-                        "Data da reportagem",
-                        value=None,
-                        min_value=min(all_dates_sorted),
-                        max_value=max(all_dates_sorted),
-                        key="date_filter",
-                    )
-                else:
-                    date_selected = None
+            else:
+                date_selected = None
 
     # --------- Aplicação dos filtros ---------
     filtered = df.copy()
