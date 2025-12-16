@@ -78,7 +78,7 @@ def inject_custom_css():
 
         /* Container principal */
         .block-container {
-            padding-top: 2.5rem;
+            padding-top: 3rem;
             padding-bottom: 2.5rem;
             max-width: 1400px;
         }
@@ -105,7 +105,7 @@ def inject_custom_css():
             border: 1px solid rgba(77, 20, 140, 0.08);
             margin-bottom: 1rem;
         }
-
+        
         .filter-title {
             font-weight: 600;
             font-size: 0.95rem;
@@ -118,7 +118,7 @@ def inject_custom_css():
             background: white;
             border-radius: 12px;
             padding: 0.9rem 1.1rem;
-            border-left: 4px solid #FF6600;
+            border-left: 4px solid #FF6600; /* laranja FedEx*/
             box-shadow: 0 6px 15px rgba(0,0,0,0.05);
         }
         .metric-label {
@@ -151,6 +151,19 @@ def inject_custom_css():
             border: 1px solid rgba(77,20,140,0.08);
             box-shadow: 0 10px 25px rgba(0,0,0,0.04);
             background: white;
+        }
+
+        /* Card de filtros (usa o container com border=True) */
+        /* Wrapper padrão que o Streamlit usa para containers com borda */
+        div[data-testid="stVerticalBlockBorderWrapper"] {
+            border: none; /* remove a borda cinza padrão */
+        }
+        div[data-testid="stVerticalBlockBorderWrapper"] > div {
+            background: white;
+            border-radius: 12px;
+            padding: 0.9rem 1.1rem 0.6rem 1.1rem;
+            border-left: 4px solid #4D148C; /* faixa roxa à esquerda */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
         }
 
         /* Labels dos filtros */
@@ -215,42 +228,45 @@ def main():
 
     # --------- Filtros em card ---------
     with st.container():
-        st.markdown(
-            '<div class="filter-card">'
-            '<div class="filter-title">Filtros</div>',
-            unsafe_allow_html=True,
-        )
+        filter_box = st.container(border=True)  # este é o retângulo branco
 
-        col1, col2, col3 = st.columns(3)
-
-        # UF
-        with col1:
-            uf_options = ["TODOS"] + sorted(
-                [u for u in df["uf"].unique() if isinstance(u, str) and u.strip()]
+        with filter_box:
+            # Título do card
+            st.markdown(
+                '<div class="filter-title">Filtros</div>',
+                unsafe_allow_html=True,
             )
-            uf_selected = st.selectbox("UF", uf_options, index=0, key="uf_filter")
 
-        # Mídia
-        with col2:
-            media_options = ["TODAS"] + sorted(
-                [m for m in df["source"].unique() if isinstance(m, str) and m.strip()]
-            )
-            media_selected = st.selectbox("Mídia", media_options, index=0, key="media_filter")
+            col1, col2, col3 = st.columns(3)
 
-        # Data
-        with col3:
-            all_dates = df["data"].dropna().unique()
-            all_dates_sorted = sorted(all_dates)
-            if all_dates_sorted:
-                date_selected = st.date_input(
-                    "Data da reportagem",
-                    value=None,
-                    min_value=min(all_dates_sorted),
-                    max_value=max(all_dates_sorted),
-                    key="date_filter",
+            # UF
+            with col1:
+                uf_options = ["TODOS"] + sorted(
+                    [u for u in df["uf"].unique() if isinstance(u, str) and u.strip()]
                 )
-            else:
-                date_selected = None
+                uf_selected = st.selectbox("UF", uf_options, index=0, key="uf_filter")
+
+            # Mídia
+            with col2:
+                media_options = ["TODAS"] + sorted(
+                    [m for m in df["source"].unique() if isinstance(m, str) and m.strip()]
+                )
+                media_selected = st.selectbox("Mídia", media_options, index=0, key="media_filter")
+
+            # Data
+            with col3:
+                all_dates = df["data"].dropna().unique()
+                all_dates_sorted = sorted(all_dates)
+                if all_dates_sorted:
+                    date_selected = st.date_input(
+                        "Data da reportagem",
+                        value=None,
+                        min_value=min(all_dates_sorted),
+                        max_value=max(all_dates_sorted),
+                        key="date_filter",
+                    )
+                else:
+                    date_selected = None
 
         st.markdown("</div>", unsafe_allow_html=True)
 
