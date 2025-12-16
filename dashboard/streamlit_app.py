@@ -167,7 +167,7 @@ def render_header():
                 '<div class="app-subtitle">'
                 'Monitoramento centralizado'
                 '</div>',
-                unsafe_allow_html=True,,
+                unsafe_allow_html=True,
             )
 
 
