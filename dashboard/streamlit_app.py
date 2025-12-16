@@ -95,16 +95,6 @@ def inject_custom_css():
             font-size: 0.95rem;
             color: #5f5f7a;
         }
-
-        /* Card de filtros */
-        .filter-card {
-            background: white;
-            border-radius: 14px;
-            padding: 1.2rem 1.4rem 0.6rem 1.4rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-            border: 1px solid rgba(77, 20, 140, 0.08);
-            margin-bottom: 1rem;
-        }
         
         .filter-title {
             font-weight: 600;
@@ -153,20 +143,22 @@ def inject_custom_css():
             background: white;
         }
 
-        /* Card de filtros (usa o container com border=True) */
-        /* Wrapper padrão que o Streamlit usa para containers com borda */
+        /* ---------- CARD DE FILTROS ---------- */
+        /* st.container(border=True) -> wrapper com borda padrão do Streamlit */
         div[data-testid="stVerticalBlockBorderWrapper"] {
-            border: none !important; /* remove a borda cinza padrão */
-            padding: 0 !important;
-        }
-
-        div[data-testid="stVerticalBlockBorderWrapper"] > div {
-            background: white !important;
+            background: #ffffff !important;
             border-radius: 12px !important;
             padding: 0.9rem 1.1rem 0.6rem 1.1rem !important;
-            border-left: 4px solid #4D148C !important; /* faixa roxa à esquerda */
+            border-left: 4px solid #4D148C !important;  /* faixa roxa à esquerda */
             border: 1px solid rgba(77,20,140,0.08) !important;
             box-shadow: 0 6px 15px rgba(0,0,0,0.05) !important;
+        }
+
+        /* Remove qualquer borda extra interna que o Streamlit coloque dentro do wrapper */
+        div[data-testid="stVerticalBlockBorderWrapper"] > div {
+            border: none !important;
+            padding: 0 !important;
+            background: transparent !important;
         }
 
         /* Labels dos filtros */
@@ -270,8 +262,6 @@ def main():
                     )
                 else:
                     date_selected = None
-
-        st.markdown("</div>", unsafe_allow_html=True)
 
     # --------- Aplicação dos filtros ---------
     filtered = df.copy()
