@@ -15,7 +15,7 @@ from url_utils import infer_uf_from_url
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from export_for_streamlit import export_news_to_csv_and_push
+from export_for_streamlit import export_news_to_csv
 
 # ----------------- Configuração de log -----------------
 
@@ -273,10 +273,11 @@ def run_monitor_cycle(max_workers: int = 6) -> None:
     logger.info("Ciclo de monitoramento concluído.")
 
     try:
-        export_news_to_csv_and_push()
-        logger.info("Exportação + commit/push do CSV concluídos com sucesso.")
+        export_news_to_csv()
     except Exception:
-        logger.exception("Falha ao exportar e enviar CSV para o dashboard.")
+        logger.exception("Falha ao exportar CSV para o dashboard.")
+    else:
+        logger.info("CSV exportado com sucesso (sem commit/push automático).")
 
 
 if __name__ == "__main__":

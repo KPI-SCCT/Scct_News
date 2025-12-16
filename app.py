@@ -110,8 +110,8 @@ def create_app() -> Flask:
         init_db()
 
     # Agendador para rodar o monitor automaticamente a cada 30 minutos
-    scheduler = BackgroundScheduler(daemon=True)
-    scheduler.add_job(run_monitor_cycle, "interval", minutes=30)
+    scheduler = BackgroundScheduler(timezone="America/Sao_Paulo", daemon=True)
+    scheduler.add_job(run_monitor_cycle, "interval", minutes=30, id="news_monitor")
 
     # Evita duplicar o agendador no modo debug com reloader
     if not app.debug or os.environ.get("WERKZEUG_RUN_MAIN") == "true":
