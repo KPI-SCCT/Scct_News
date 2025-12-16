@@ -11,8 +11,11 @@ DATA_PATH = os.path.join(BASE_DIR, "data", "news_latest.csv")
 LOGO_PATH = os.path.join(BASE_DIR, "assets", "logo_fedex.png")
 
 
-@st.cache_data
-def load_data() -> pd.DataFrame:
+def _load_data_internal(mtime: float) -> pd.DataFrame:
+    """
+    Função interna cacheada: recebe o mtime do arquivo CSV.
+    Sempre que o mtime mudar, o cache é invalidado.
+    """
     if not os.path.exists(DATA_PATH):
         return pd.DataFrame(
             columns=["id", "published_at", "title", "url", "source", "uf", "city", "category"]
@@ -40,6 +43,27 @@ def load_data() -> pd.DataFrame:
     return df
 
 
+@st.cache_data
+def load_data_cached(mtime: float) -> pd.DataFrame:
+    """
+    Wrapper cacheado em torno do loader interno.
+    O argumento mtime é usado como chave de cache.
+    """
+    return _load_data_internal(mtime)
+
+
+def load_data() -> pd.DataFrame:
+    """
+    Função que o restante da app usa.
+    Ela calcula o mtime do CSV e delega para a função cacheada.
+    """
+    if os.path.exists(DATA_PATH):
+        mtime = os.path.getmtime(DATA_PATH)
+    else:
+        mtime = 0.0
+    return load_data_cached(mtime)
+
+
 def inject_custom_css():
     """
     Injeta CSS para aplicar a paleta roxo + laranja e um layout mais moderno.
@@ -54,7 +78,7 @@ def inject_custom_css():
 
         /* Container principal */
         .block-container {
-            padding-top: 1.5rem;
+            padding-top: 2.5rem;
             padding-bottom: 2.5rem;
             max-width: 1400px;
         }
