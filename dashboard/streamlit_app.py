@@ -156,14 +156,17 @@ def inject_custom_css():
         /* Card de filtros (usa o container com border=True) */
         /* Wrapper padrão que o Streamlit usa para containers com borda */
         div[data-testid="stVerticalBlockBorderWrapper"] {
-            border: none; /* remove a borda cinza padrão */
+            border: none !important; /* remove a borda cinza padrão */
+            padding: 0 !important;
         }
+
         div[data-testid="stVerticalBlockBorderWrapper"] > div {
-            background: white;
-            border-radius: 12px;
-            padding: 0.9rem 1.1rem 0.6rem 1.1rem;
-            border-left: 4px solid #4D148C; /* faixa roxa à esquerda */
-            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            background: white !important;
+            border-radius: 12px !important;
+            padding: 0.9rem 1.1rem 0.6rem 1.1rem !important;
+            border-left: 4px solid #4D148C !important; /* faixa roxa à esquerda */
+            border: 1px solid rgba(77,20,140,0.08) !important;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05) !important;
         }
 
         /* Labels dos filtros */
