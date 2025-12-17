@@ -1,4 +1,5 @@
 ﻿id;published_at;title;url;source;uf;city;category
+<<<<<<< HEAD
 3277;2025-12-17 13:57:29;Sicoob Credip atinge R$ 5 bilhões em ativos;https://g1.globo.com/ro/rondonia/especial-publicitario/sicoob-credip/sicoob-credip/noticia/2025/12/17/sicoob-credip-atinge-r-5-bilhoes-em-ativos.ghtml;G1;RO;;
 3276;2025-12-17 13:47:51;Sinfônica da UFPB apresenta concerto de Natal, nesta sexta-feira (19);https://noticias.r7.com/paraiba/portal-correio/sinfonica-da-ufpb-apresenta-concerto-de-natal-nesta-sexta-feira-19-17122025/;R7;PB;;
 3275;2025-12-17 13:47:51;"Bruno sai na frente e fortalece Efraim; Pedro e Romero seguem indefinidos";https://noticias.r7.com/paraiba/portal-correio/bruno-sai-na-frente-e-fortalece-efraim-pedro-e-romero-seguem-indefinidos-17122025/;R7;PB;;
@@ -70,6 +71,9 @@
 3190;2025-12-17 11:24:51;Catedral de Curitiba terá visitas guiadas mensais em 2026;https://g1.globo.com/pr/parana/noticia/2025/12/17/catedral-de-curitiba-visitas-guiadas-2026.ghtml;G1;PR;;
 3182;2025-12-17 11:18:04;"Podridão peduncular afeta pomares brasileiros; conheça estratégias de controle";https://noticias.r7.com/sao-paulo/interior/agro-record-interior-sp/podridao-peduncular-afeta-pomares-brasileiros-conheca-estrategias-de-controle-17122025/;R7;SP;;
 3192;2025-12-17 11:15:05;‘Golpe da maquininha’: turista argentino relata ter pagado 3 mil euros por um maço de cigarro;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/17/golpe-da-maquininha-turista-argentino-relata-prejuizo.ghtml;G1;RJ;;
+=======
+3182;2025-12-17 11:18:04;"Podridão peduncular afeta pomares brasileiros; conheça estratégias de controle";https://noticias.r7.com/sao-paulo/interior/agro-record-interior-sp/podridao-peduncular-afeta-pomares-brasileiros-conheca-estrategias-de-controle-17122025/;R7;SP;;
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3176;2025-12-17 11:13:42;Operação da Paraíba cumpre 50 mandados em cinco estados contra tráfico de drogas e lavagem de dinheiro;https://g1.globo.com/pb/paraiba/noticia/2025/12/17/operacao-da-paraiba-cumpre-50-mandados-em-cinco-estados-contra-trafico-de-drogas-e-lavagem-de-dinheiro.ghtml;G1;PB;;
 3175;2025-12-17 11:08:42;Veja prazos para renovação de matrícula e inscrição de novos alunos;https://g1.globo.com/pi/piaui/noticia/2025/12/17/rede-estadual-de-ensino-divulga-prazos-para-renovacao-de-matricula-e-inscricao-de-novos-alunos-no-pi-veja.ghtml;G1;PI;;
 3172;2025-12-17 11:07:59;'O agente secreto' aparece em pré-listas do Oscar 2026;https://g1.globo.com/pop-arte/cinema/noticia/2025/12/16/o-agente-secreto-e-um-dos-15-pre-selecionados-para-o-oscar-de-melhor-filme-internacional.ghtml;G1;BA;;
@@ -79,6 +83,7 @@
 3170;2025-12-17 10:57:27;Argentina: Foragidos do 8/1 que quebraram tornozeleira vão para domiciliar;https://www.cnnbrasil.com.br/blogs/luciana-taddeo/internacional/argentina-foragidos-do-8-1-que-quebraram-tornozeleira-vao-para-domiciliar/;CNN Brasil;PB;;
 3179;2025-12-17 10:57:03;"SC tem amanhecer com campos cobertos por geada e mínima de 1 °C; VÍDEO";https://g1.globo.com/sc/santa-catarina/noticia/2025/12/17/serra-sc-amanhece-geada-campos-cobertos-geada-minima-1-c-video.ghtml;G1;SC;;
 3166;2025-12-17 10:53:32;Três homens são mortos em confronto com a polícia no Recôncavo da Bahia;https://g1.globo.com/ba/bahia/noticia/2025/12/17/homens-sao-mortos-em-confronto-com-a-policia-no-reconcavo-da-bahia.ghtml;G1;BA;;
+<<<<<<< HEAD
 3184;2025-12-17 10:50:24;Decoração de futebol, camisetas personalizadas e mais: veja detalhes da festa de 6 anos do filho de Marília Mendonça com Murillo Huff;https://g1.globo.com/go/goias/noticia/2025/12/17/decoracao-de-futebol-camisetas-personalizadas-e-mais-veja-detalhes-da-festa-de-6-anos-do-filho-de-marilia-mendonca-com-murillo-huff.ghtml;G1;GO;;
 3165;2025-12-17 10:47:19;Mulher é resgatada após ser mantida em cárcere privado, em João Pessoa;https://noticias.r7.com/paraiba/portal-correio/mulher-e-resgatada-apos-ser-mantida-em-carcere-privado-em-joao-pessoa-17122025/;R7;PB;;
 3164;2025-12-17 10:45:54;Operação da polícia mira delivery de drogas do Comando Vermelho no RJ;https://www.cnnbrasil.com.br/nacional/sudeste/rj/operacao-da-policia-mira-delivery-de-drogas-do-comando-vermelho-no-rj/;CNN Brasil;RJ;;
@@ -86,16 +91,26 @@
 3215;2025-12-17 10:44:22;Pneu estoura em buraco e caminhão com carga de milho tomba na MS-480;https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2025/12/17/pneu-estoura-em-buraco-e-caminhao-com-carga-de-milho-tomba-na-ms-480.ghtml;G1;MS;;
 3160;2025-12-17 10:43:56;CIEE oferece mais de 8 mil vagas de estágio e Jovem Aprendiz;https://g1.globo.com/ba/bahia/blogdoemprego/noticia/2025/12/16/ciee-oferece-vagas-na-bahia.ghtml;G1;BA;;
 3265;2025-12-17 10:35:32;Confira vagas de emprego para Aracaju e Barra dos Coqueiros;https://g1.globo.com/se/sergipe/noticia/2025/12/17/confira-vagas-de-emprego-para-aracaju-e-barra-dos-coqueiros.ghtml;G1;SE;;
+=======
+3165;2025-12-17 10:47:19;Mulher é resgatada após ser mantida em cárcere privado, em João Pessoa;https://noticias.r7.com/paraiba/portal-correio/mulher-e-resgatada-apos-ser-mantida-em-carcere-privado-em-joao-pessoa-17122025/;R7;PB;;
+3164;2025-12-17 10:45:54;Operação da polícia mira delivery de drogas do Comando Vermelho no RJ;https://www.cnnbrasil.com.br/nacional/sudeste/rj/operacao-da-policia-mira-delivery-de-drogas-do-comando-vermelho-no-rj/;CNN Brasil;RJ;;
+3160;2025-12-17 10:43:56;CIEE oferece mais de 8 mil vagas de estágio e Jovem Aprendiz;https://g1.globo.com/ba/bahia/blogdoemprego/noticia/2025/12/16/ciee-oferece-vagas-na-bahia.ghtml;G1;BA;;
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3161;2025-12-17 10:33:57;"Ceará terá 12 feriadões em 2026; veja calendário de folgas";https://g1.globo.com/ce/ceara/noticia/2025/09/30/ceara-tera-12-feriadoes-em-2026-veja-calendario-de-folgas.ghtml;G1;CE;;
 3158;2025-12-17 10:25:54;Foguete que fará o 1º voo comercial no Brasil levará ao espaço satélites para estudos ambientais, de comunicação e análise solar;https://g1.globo.com/ma/maranhao/noticia/2025/12/16/foguete-que-fara-o-1o-voo-comercial-no-brasil-levara-ao-espaco-satelites-para-estudos-ambientais-de-comunicacao-e-analise-solar.ghtml;G1;MA;;
 3159;2025-12-17 10:18:46;"Após chuva intensa, homem desaparece em córrego em Guarulhos; Defesa Civil contabiliza sete mortes no estado de SP";https://g1.globo.com/sp/sao-paulo/noticia/2025/12/17/apos-chuva-intensa-homem-desaparece-em-corrego-em-guarulhos-defesa-civil-contabiliza-sete-mortes-no-estado-de-sp.ghtml;G1;SP;;
 3156;2025-12-17 10:17:17;Saiba o passo a passo para tirar a primeira CNH usando o aplicativo CNH do Brasil;https://noticias.r7.com/paraiba/portal-correio/saiba-o-passo-a-passo-para-tirar-a-primeira-cnh-usando-o-aplicativo-cnh-do-brasil-17122025/;R7;PB;;
+<<<<<<< HEAD
 3249;2025-12-17 10:15:12;Empresário é morto a facadas após reagir a assalto na própria loja em Palmas;https://g1.globo.com/to/tocantins/noticia/2025/12/17/empresario-e-morto-a-facadas-apos-reagir-a-assalto-em-loja-de-palmas.ghtml;G1;TO;;
 3246;2025-12-17 10:14:34;Homem internado com suspeita de raiva humana foi mordido por sagui e não procurou atendimento médico;https://g1.globo.com/pb/paraiba/noticia/2025/12/17/homem-internado-com-suspeita-de-raiva-humana-na-pb-foi-mordido-por-sagui-e-nao-procurou-atendimento-medico.ghtml;G1;PB;;
 3149;2025-12-17 10:05:15;Inteligência artificial desenvolvida pelo TJGO poderá agilizar processos judiciais em todo o Brasil;https://g1.globo.com/go/goias/noticia/2025/12/17/inteligencia-artificial-desenvolvida-pelo-tjgo-podera-agilizar-processos-judiciais-em-todo-o-brasil.ghtml;G1;GO;;
 3153;2025-12-17 10:01:52;Líder religioso suspeito de matar mulher fazia batismos na região onde corpo foi achado, em Roraima;https://g1.globo.com/rr/roraima/noticia/2025/12/17/pastor-suspeito-de-matar-mulher-fazia-batismos-na-regiao-onde-corpo-foi-achado-em-roraima.ghtml;G1;RR;;
 3221;2025-12-17 09:44:42;Coleta de lixo: trabalhadores da limpeza iniciam greve em Teresina;https://g1.globo.com/pi/piaui/noticia/2025/12/17/greve-trabalhadores-limpeza-teresina.ghtml;G1;PI;;
 3220;2025-12-17 09:44:42;Casal suspeito de integrar facção criminosa é preso em operação no PI e SP;https://g1.globo.com/pi/piaui/noticia/2025/12/17/operacao-suspeitos-faccao-presos.ghtml;G1;PI;;
+=======
+3149;2025-12-17 10:05:15;Inteligência artificial desenvolvida pelo TJGO poderá agilizar processos judiciais em todo o Brasil;https://g1.globo.com/go/goias/noticia/2025/12/17/inteligencia-artificial-desenvolvida-pelo-tjgo-podera-agilizar-processos-judiciais-em-todo-o-brasil.ghtml;G1;GO;;
+3153;2025-12-17 10:01:52;Líder religioso suspeito de matar mulher fazia batismos na região onde corpo foi achado, em Roraima;https://g1.globo.com/rr/roraima/noticia/2025/12/17/pastor-suspeito-de-matar-mulher-fazia-batismos-na-regiao-onde-corpo-foi-achado-em-roraima.ghtml;G1;RR;;
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3138;2025-12-17 09:29:00;"Três homens são mortos a tiros em Salvador; vítimas foram encontradas com mãos e pés amarrados";https://g1.globo.com/ba/bahia/noticia/2025/12/17/triplo-homicidio-em-salvador.ghtml;G1;BA;;
 3151;2025-12-17 09:28:34;Raiva: veja onde buscar atendimento após acidentes com animais;https://g1.globo.com/pi/piaui/noticia/2025/12/17/raiva-humana-atendimento-teresina.ghtml;G1;PI;;
 3136;2025-12-17 09:24:26;Chuva forte no Grande Rio afeta trens e alaga vias;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/17/chuva-forte-no-grande-rio-afeta-trens-e-alaga-vias.ghtml;G1;RJ;;
@@ -107,7 +122,10 @@
 3125;2025-12-17 09:06:16;Aos 22 anos, militar entra para a história ao ser a 1ª mulher a concluir curso no Pantanal;https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2025/12/17/aos-22-anos-militar-entra-para-a-historia-ao-ser-a-1a-mulher-a-concluir-curso-no-pantanal.ghtml;G1;MS;;
 3124;2025-12-17 09:04:55;g1 Feira de Santana e região celebra um ano com dez milhões de acessos e cobertura local completa;https://g1.globo.com/ba/feira-de-santana-regiao/noticia/2025/12/17/g1-celebra-um-ano-em-feira-de-santana-com-cobertura-completa-da-regiao.ghtml;G1;BA;;
 3126;2025-12-17 08:55:52;"Maré recebe exposição de jovens fotógrafos do complexo; veja fotos";https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/17/mare-recebe-exposicao-de-jovens-fotografos-do-complexo-veja-fotos.ghtml;G1;RJ;;
+<<<<<<< HEAD
 3193;2025-12-17 08:45:28;"Nova Região Metropolitana de Araguaína busca desenvolver municípios e reduzir desigualdades; entenda";https://g1.globo.com/to/tocantins/noticia/2025/12/17/nova-regiao-metropolitana-de-araguaina-busca-desenvolver-municipios-e-reduzir-desigualdades-entenda.ghtml;G1;TO;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3127;2025-12-17 08:15:10;Mãe pede indenização após ter dados sigilosos de processo de adoção expostos na internet;https://g1.globo.com/sp/sao-paulo/noticia/2025/12/17/mae-pede-indenizacao-apos-ter-dados-sigilosos-de-processo-de-adocao-expostos-na-internet.ghtml;G1;SP;;
 3115;2025-12-17 08:07:35;Shows de Léo Foguete, Rodriguinho e Almir Rouche, exposição sobre maestros de frevo, espetáculos e mais: confira agenda cultural;https://g1.globo.com/pe/pernambuco/o-que-fazer-no-recife/noticia/2025/12/17/shows-de-leo-foguete-rodriguinho-e-almir-rouche-exposicao-sobre-maestros-de-frevo-espetaculos-e-mais-confira-agenda-cultural.ghtml;G1;PE;;
 3118;2025-12-17 08:05:10;Judiciário altera normas após reportagem do g1 revelar exposição de dados de crianças e adolescentes;https://g1.globo.com/sp/sao-paulo/noticia/2025/12/17/judiciario-altera-normas-apos-reportagem-do-g1-revelar-exposicao-de-dados-de-criancas-e-adolescentes.ghtml;G1;SP;;
@@ -153,7 +171,10 @@
 3076;2025-12-17 01:57:42;Cinco suspeitos morrem em confronto durante operação contra o PCC;https://www.cnnbrasil.com.br/nacional/sudeste/sp/cinco-suspeitos-morrem-em-confronto-durante-operacao-contra-o-pcc/;CNN Brasil;SP;;
 3075;2025-12-17 01:57:26;Sete suspeitos de roubo de cargas são presos em operação no Paraná;https://www.cnnbrasil.com.br/nacional/sul/pr/sete-suspeitos-de-roubo-de-cargas-sao-presos-em-operacao-no-parana/;CNN Brasil;PR;;
 3074;2025-12-17 01:45:54;"Traficante ""Xuxa"" é morto em confronto com polícia no Paraná";https://www.cnnbrasil.com.br/nacional/sul/pr/traficante-xuxa-e-morto-em-confronto-com-policia-no-parana/;CNN Brasil;PR;;
+<<<<<<< HEAD
 3254;2025-12-17 01:34:10;Acre tem mais de 4,5 mil usuários de aplicativo com aulas gratuitas para CNH;https://g1.globo.com/ac/acre/noticia/2025/12/16/acre-tem-milhares-de-usuarios-de-aplicativo-com-aulas-gratuitas-para-cnh.ghtml;G1;AC;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3073;2025-12-17 01:17:47;Reforma tributária promete grandes mudanças para a indústria e operações portuárias;https://noticias.r7.com/sao-paulo/litoral-vale/conexao-porto-e-industria/reforma-tributaria-promete-grandes-mudancas-para-a-industria-e-operacoes-portuarias-17122025/;R7;SP;;
 3072;2025-12-17 01:17:47;Novo trecho da linha do VLT passa a cobrar tarifa de R$ 5,35 em Santos (SP);https://noticias.r7.com/sao-paulo/litoral-vale/sp-record/novo-trecho-da-linha-do-vlt-passa-a-cobrar-tarifa-de-r-535-em-santos-sp-17122025/;R7;SP;;
 3155;2025-12-17 01:15:09;Nova ponte entre Tocantins e Maranhão será entregue no dia 22, um ano após desabamento;https://g1.globo.com/to/tocantins/noticia/2025/12/16/nova-ponte-entre-tocantins-e-maranhao-sera-entregue-no-dia-22-um-ano-apos-desabamento.ghtml;G1;TO;;
@@ -165,7 +186,10 @@
 3066;2025-12-17 00:49:17;Nova norma do Ministério do Turismo muda regras para serviços de hospedagem;https://noticias.r7.com/sao-paulo/interior/sp-record-interior-sp/nova-norma-do-ministerio-do-turismo-muda-regras-para-servicos-de-hospedagem-17122025/;R7;SP;;
 3065;2025-12-17 00:49:17;Procon reforça orientação ao consumidor para compras de Natal em Ribeirão Preto (SP);https://noticias.r7.com/sao-paulo/interior/sp-record-interior-sp/procon-reforca-orientacao-ao-consumidor-para-compras-de-natal-em-ribeirao-preto-sp-17122025/;R7;SP;;
 3064;2025-12-17 00:45:00;Prefeitura compra prédio que vai abrigar o Hospital Municipal Universitário;https://g1.globo.com/ro/rondonia/noticia/2025/12/16/prefeitura-de-porto-velho-compra-predio-que-vai-abrigar-o-hospital-municipal-universitario.ghtml;G1;RO;;
+<<<<<<< HEAD
 3269;2025-12-17 00:44:17;Após reportagem do g1, prefeitura de Cuiabá anuncia decoração de Natal em parque;https://g1.globo.com/mt/mato-grosso/noticia/2025/12/16/apos-reportagem-do-g1-prefeitura-de-cuiaba-anuncia-decoracao-de-natal-em-parque.ghtml;G1;MT;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3063;2025-12-17 00:26:36;Alepa aprova orçamento de R$ 54 bi para o estado do PA em 2026;https://g1.globo.com/pa/para/noticia/2025/12/16/alepa-aprova-orcamento-de-r-54-bilhoes-para-o-estado-do-pa-em-2026.ghtml;G1;PA;;
 3123;2025-12-17 00:13:55;Educador físico é suspeito de importunação sexual contra adolescente com autismo;https://g1.globo.com/ce/ceara/noticia/2025/12/16/educador-fisico-e-suspeito-de-importunacao-sexual-contra-adolescente-com-autismo-no-ceara.ghtml;G1;CE;;
 3060;2025-12-17 00:13:46;Policiais militares irão a júri por morte de lutador de MMA em Porto Alegre (RS );https://noticias.r7.com/rio-grande-do-sul/rio-grande-record/policiais-militares-irao-a-juri-por-morte-de-lutador-de-mma-em-porto-alegre-rs-16122025/;R7;RS;;
@@ -186,7 +210,10 @@
 3046;2025-12-16 23:44:49;Procon-RJ notifica Uber e 99 pedindo esclarecimentos sobre aumento de preços em dezembro;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/16/procon-rj-empresas-transporte-aplicativo.ghtml#G1-FEED-MIXED-RJ-user,editorial,5c12dba8-f811-4b67-92f4-9aa8687911a2;G1;RJ;;
 3045;2025-12-16 23:44:49;TH Joias é transferido para Presídio Federal de Brasília;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/16/th-joias-e-transferido-para-presidio-federal-de-brasilia.ghtml#G1-FEED-MIXED-RJ-user,editorial,5c12dba8-f811-4b67-92f4-9aa8687911a2;G1;RJ;;
 3141;2025-12-16 23:44:49;Licitação para compra de combustível é suspensa após indício de sobrepreço de até R$ 1 milhão;https://g1.globo.com/pi/piaui/noticia/2025/12/16/licitacao-combustivel-suspensa-indicio-sobrepreco.ghtml;G1;PI;;
+<<<<<<< HEAD
 3218;2025-12-16 23:44:37;Passagens ficam até 15% mais caras para quem vai viajar no Natal e Ano Novo no Pará, aponta Dieese;https://g1.globo.com/pa/para/noticia/2025/12/16/passagens-ficam-ate-15percent-mais-caras-para-quem-vai-viajar-no-natal-e-ano-novo-aponta-dieese.ghtml;G1;PA;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3044;2025-12-16 23:38:56;Polícia prende verdadeiros criminosos após deter injustamente dois jovens inocentes;https://noticias.r7.com/rio-grande-do-sul/cidade-alerta-rs/policia-prende-verdadeiros-criminosos-apos-deter-injustamente-dois-jovens-inocentes-16122025/;R7;RS;;
 3043;2025-12-16 23:37:42;Igreja Universal organiza ceia solidária para pessoas em situação de rua em Manaus;https://noticias.r7.com/amazonas/amazonas-record/igreja-universal-organiza-ceia-solidaria-para-pessoas-em-situacao-de-rua-em-manaus-16122025/;R7;AM;;
 3042;2025-12-16 23:37:42;Amazonas inaugura centro de reciclagem para construção de casas sustentáveis;https://noticias.r7.com/amazonas/amazonas-record/amazonas-inaugura-centro-de-reciclagem-para-construcao-de-casas-sustentaveis-16122025/;R7;AM;;
@@ -195,7 +222,10 @@
 3037;2025-12-16 23:16:59;Condenações do serial killer de Rio Verde (GO) já ultrapassam 133 anos de prisão;https://noticias.r7.com/goias/goias-record/condenacoes-do-serial-killer-de-rio-verde-go-ja-ultrapassam-133-anos-de-prisao-16122025/;R7;GO;;
 3036;2025-12-16 23:16:59;Mãe de advogado assassinado afirma que filho foi vítima de latrocínio;https://noticias.r7.com/goias/goias-record/mae-de-advogado-assassinado-afirma-que-filho-foi-vitima-de-latrocinio-16122025/;R7;GO;;
 3128;2025-12-16 23:15:10;Governador do Tocantins envia projeto de PEC com teto único e restruturação da Polícia Civil à Assembleia Legislativa;https://g1.globo.com/to/tocantins/noticia/2025/12/16/governador-do-tocantins-envia-projeto-de-pec-com-teto-unico-e-restruturacao-da-policia-civil-a-assembleia-legislativa.ghtml;G1;TO;;
+<<<<<<< HEAD
 3203;2025-12-16 23:14:24;Segundo adolescente é apreendido suspeito de envolvimento em morte de mulher;https://g1.globo.com/mt/mato-grosso/noticia/2025/12/16/segundo-adolescente-e-apreendido-suspeito-de-envolvimento-em-morte-de-mulher-em-mt.ghtml;G1;MT;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3033;2025-12-16 23:14:15;Projeto Compondo Talentos faz apresentação gratuita;https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2025/12/16/projeto-compondo-talentos-faz-apresentacao-gratuita-em-campo-grande.ghtml;G1;MS;;
 3032;2025-12-16 23:04:09;Audiência sobre morte de estudante em Pontal (SP) avança para fase final;https://noticias.r7.com/sao-paulo/interior/cidade-alerta-interior-sp/audiencia-sobre-morte-de-estudante-em-pontal-sp-avanca-para-fase-final-16122025/;R7;SP;;
 3031;2025-12-16 23:04:09;Ministério Público de SP denuncia segurança que agrediu empresário em adega em Guarulhos;https://noticias.r7.com/sao-paulo/ministerio-publico-de-sp-denuncia-seguranca-que-agrediu-empresario-em-adega-em-guarulhos-16122025/;R7;SP;;
@@ -213,7 +243,10 @@
 3018;2025-12-16 22:41:34;Zema aparece com 33% das intenções de voto, e Lula, 45%, em eventual 2º turno;https://g1.globo.com/politica/noticia/2025/12/16/quaest-intencao-de-voto-2026.ghtml;G1;MG;;
 3040;2025-12-16 22:35:30;Acidente entre ônibus e caminhão deixa um morto na BR-262;https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2025/12/16/acidente-entre-onibus-e-caminhao-deixa-um-morto-na-br-262-em-ms.ghtml;G1;MS;;
 3017;2025-12-16 22:34:33;"Mais de 500 celulares roubados ou furtados serão entregues aos donos, em Belém; veja orientações";https://g1.globo.com/pa/para/noticia/2025/12/16/mais-de-500-celulares-roubados-ou-furtados-serao-entregues-aos-donos-em-belem-veja-orientacoes.ghtml;G1;PA;;
+<<<<<<< HEAD
 3255;2025-12-16 22:34:10;"Idoso morre em colisão entre motocicletas no interior do Acre; mãe e filha ficaram feridas";https://g1.globo.com/ac/acre/noticia/2025/12/16/idoso-morre-em-colisao-entre-motocicletas-no-interior-do-acre-mae-e-filha-ficaram-feridas.ghtml;G1;AC;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3020;2025-12-16 22:29:51;Câmara do Rio aprova orçamento de R$ 52 bilhões para 2026;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/16/camara-do-rio-aprova-orcamento-de-r-52-bilhoes-para-2026.ghtml;G1;RJ;;
 3014;2025-12-16 22:28:45;Polícia Civil faz apreensão de adolescentes em conflito com a lei em Belém;https://noticias.r7.com/para/cidade-alerta-para/policia-civil-faz-apreensao-de-adolescentes-em-conflito-com-a-lei-em-belem-16122025/;R7;PA;;
 3013;2025-12-16 22:28:45;Criminosos aplicam ‘golpe das marmitas’ em restaurantes de Altamira (PA);https://noticias.r7.com/para/cidade-alerta-para/criminosos-aplicam-golpe-das-marmitas-em-restaurantes-de-altamira-pa-16122025/;R7;PA;;
@@ -230,8 +263,11 @@
 3000;2025-12-16 22:11:57;Jovem e motorista morrem após carreta carregada com madeira tombar;https://g1.globo.com/sc/santa-catarina/noticia/2025/12/16/jovem-motorista-morrem-carreta-carregada-madeira-tombar-oeste-sc.ghtml;G1;SC;;
 3005;2025-12-16 22:07:46;NO AR: assista ao Boa Noite Espírito Santo;https://g1.globo.com/es/espirito-santo/ao-vivo/ao-vivo-assista-ao-boa-noite-espirito-santo.ghtml;G1;ES;;
 2999;2025-12-16 22:02:52;TH Joias é transferido para Presídio Federal de Brasília;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/16/th-joias-e-transferido-para-presidio-federal-de-brasilia.ghtml;G1;RJ;;
+<<<<<<< HEAD
 3240;2025-12-16 22:00:08;Macaco-prego que furtou cafeteira é flagrado com faca e acaba capturado;https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/12/16/macaco-cafeteira-faca-capturado-rn.ghtml;G1;RN;;
 3238;2025-12-16 21:59:34;Mato Grosso tem maior procura de recuperação judicial no agro no 3º trimestre deste ano;https://g1.globo.com/mt/mato-grosso/noticia/2025/12/16/mato-grosso-tem-maior-procura-de-recuperacao-judicial-no-agro-no-3o-trimestre-deste-ano.ghtml;G1;MT;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 3003;2025-12-16 21:55:09;Caso Gritzbach: Justiça Militar condena 11 PMs por fazerem segurança ilegal para delator do PCC morto em aeroporto de SP;https://g1.globo.com/sp/sao-paulo/noticia/2025/12/16/caso-gritzbach-justica-militar-condena-11-pms-por-fazerem-seguranca-ilegal-para-delator-do-pcc-morto-em-aeroporto-de-sp.ghtml;G1;SP;;
 2988;2025-12-16 21:52:22;Homem que forjou morte de mulher já tinha queixa por violência doméstica;https://www.cnnbrasil.com.br/nacional/sudeste/mg/homem-que-forjou-morte-de-mulher-ja-tinha-queixa-por-violencia-domestica/;CNN Brasil;MG;;
 3143;2025-12-16 21:44:53;Globo de Ouro terá evento no Rio em 2026 com homenagens a brasileiros;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/16/globo-de-ouro-evento-no-rio-com-homenagens-a-brasileiros-2026.ghtml;G1;RJ;;
@@ -239,10 +275,14 @@
 2983;2025-12-16 21:44:53;Paraíso do Tuiuti se antecipa e renova com Pixulé e Mestre Marcão para o Carnaval 2027;https://g1.globo.com/rj/rio-de-janeiro/carnaval/2026/noticia/2025/12/16/paraiso-do-tuiuti-renova-com-pixule-e-mestre-marcao-para-o-carnaval-2027.ghtml#G1-FEED-MIXED-RJ-user,editorial,d3fb69e9-78fe-4686-81c2-c70bbc6f66e4;G1;RJ;;
 2982;2025-12-16 21:44:53;Homens invadem clínica da família em Campinho e levam até as portas da unidade;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/16/homem-invade-clinica-da-familia-em-campinho-e-leva-ate-as-portas-da-unidade.ghtml#G1-FEED-MIXED-RJ-user,editorial,d3fb69e9-78fe-4686-81c2-c70bbc6f66e4;G1;RJ;;
 2981;2025-12-16 21:44:53;Homem que arrastou idosa em roubo na saída do banco em Bonsucesso é preso;https://g1.globo.com/rj/rio-de-janeiro/noticia/2025/12/16/homem-que-arrastou-idosa-em-roubo-na-saida-do-banco-em-bonsucesso-e-preso.ghtml;G1;RJ;;
+<<<<<<< HEAD
 3189;2025-12-16 21:44:46;Vereadores de João Pessoa aprovam LOA de R$ 5,45 bilhões para 2026;https://g1.globo.com/pb/paraiba/noticia/2025/12/16/vereadores-de-joao-pessoa-aprovam-loa-de-r-545-bilhoes-para-2026-orcamento-aumenta-11percent.ghtml;G1;PB;;
 3216;2025-12-16 21:44:36;ALMG aprova cota de 20% para negros em concursos da administração estadual;https://g1.globo.com/mg/minas-gerais/noticia/2025/12/16/almg-aprova-em-2o-turno-cota-para-negros-em-concursos-publicos-da-administracao-estadual.ghtml;G1;MG;;
 3016;2025-12-16 21:44:16;'Essa greve é ilegal', diz Adriane Lopes sobre paralisação dos ônibus em Campo Grande;https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2025/12/16/essa-greve-e-ilegal-diz-adriane-lopes-sobre-paralisacao-dos-onibus-em-campo-grande.ghtml;G1;MS;;
 3263;2025-12-16 21:35:11;Pagodeiro gospel e jogador de futebol: quem é suspeito de matar mulher;https://g1.globo.com/rr/roraima/noticia/2025/12/16/pagodeiro-gospel-e-jogador-de-futebol-quem-e-suspeito-de-matar-mulher-e-jogar-corpo-em-rio-de-rr.ghtml;G1;RR;;
+=======
+3016;2025-12-16 21:44:16;'Essa greve é ilegal', diz Adriane Lopes sobre paralisação dos ônibus em Campo Grande;https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2025/12/16/essa-greve-e-ilegal-diz-adriane-lopes-sobre-paralisacao-dos-onibus-em-campo-grande.ghtml;G1;MS;;
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 2974;2025-12-16 21:32:58;Suspeito de atacar companheira com golpes de faca é preso em Salvador;https://g1.globo.com/ba/bahia/noticia/2025/12/16/suspeito-de-atacar-mulher-com-golpes-de-faca-e-preso.ghtml;G1;BA;;
 2978;2025-12-16 21:30:35;Vale das Minas Park tem mais R$ 1 milhão de vendas em apenas quatro horas;https://g1.globo.com/pa/para/especial-publicitario/vale-das-minas-park/noticia/2025/12/16/vale-das-minas-park-tem-mais-r-1-milhao-de-vendas-em-apenas-quatro-horas.ghtml;G1;PA;;
 2989;2025-12-16 21:29:58;Bell Marques, Ivete e mais: veja preços dos blocos que já estão à venda;https://g1.globo.com/ba/bahia/carnavalnabahia/noticia/2025/12/16/precos-blocos-carnaval-de-salvador.ghtml;G1;BA;;
@@ -286,7 +326,10 @@
 3142;2025-12-16 20:44:49;Projeto de lei quer proibir uso de maconha em ambientes coletivos e prevê interdição de estabelecimentos;https://g1.globo.com/pi/piaui/noticia/2025/12/16/projeto-de-lei-uso-maconha-ambientes-coletivos.ghtml;G1;PI;;
 3140;2025-12-16 20:44:49;Cerca de 100 tabletes de maconha escondidos dentro de máquina de lavar são apreendidos em Teresina;https://g1.globo.com/pi/piaui/noticia/2025/12/16/tabletes-maconha-apreendidos-maquina-de-lavar-teresina.ghtml;G1;PI;;
 3019;2025-12-16 20:44:37;TRE-PR derruba cassação de prefeito e vice acusados de promover churrasco e dar canos de PVC em troca de votos em Pontal do Paraná;https://g1.globo.com/pr/parana/noticia/2025/12/16/tre-pr-derruba-cassacao-de-prefeito-e-vice-acusados-de-promover-churrasco-e-dar-canos-de-pvc-em-troca-de-votos-em-pontal-do-parana.ghtml;G1;PR;;
+<<<<<<< HEAD
 3213;2025-12-16 20:43:58;Advogado é capturado suspeito de levar bilhetes para chefe de facção preso;https://g1.globo.com/ce/ceara/noticia/2025/12/16/advogado-e-capturado-suspeito-de-levar-bilhetes-para-chefe-de-faccao-preso-no-ceara.ghtml;G1;CE;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 2945;2025-12-16 20:43:11;Da gravidez ao parto: Saiba como é o cuidado às gestantes de São José dos Pinhais;https://g1.globo.com/pr/parana/especial-publicitario/prefeitura-de-sao-jose-dos-pinhais/sao-jose-dos-pinhais-para-todos/noticia/2025/12/16/da-gravidez-ao-parto-saiba-como-e-o-cuidado-as-gestantes-de-sao-jose-dos-pinhais.ghtml;G1;PR;;
 3011;2025-12-16 20:26:40;'Foi uma coisa assustadora', diz mulher após ser atropelada na calçada enquanto trabalhava;https://g1.globo.com/se/sergipe/noticia/2025/12/16/foi-uma-coisa-assustadora-diz-mulher-apos-ser-atropelada-na-calcada-enquanto-trabalhava-em-estancia.ghtml;G1;SE;;
 3131;2025-12-16 20:25:52;Vila Velha e Colatina abrem seleções para Saúde e Educação e salário de até R$ 10 mil;https://g1.globo.com/es/espirito-santo/concursos-e-emprego/noticia/2025/12/16/vila-velha-e-colatina-abrem-selecoes-para-saude-e-educacao-e-salario-de-ate-r-10-mil-veja-como-se-inscrever.ghtml;G1;ES;;
@@ -347,10 +390,14 @@
 2813;2025-12-16 20:04:34;"Serpentes lideram acidentes com animais peçonhentos no Amazonas em 2025; saiba como prevenir";https://g1.globo.com/am/amazonas/noticia/2025/12/16/serpentes-lideram-acidentes-com-animais-peconhentos-no-amazonas-em-2025-saiba-como-prevenir.ghtml;G1;AM;;
 3027;2025-12-16 20:00:37;VÍDEO: tutor solta coleira de cão rottweiler que corre para atacar gato em terreno baldio;https://g1.globo.com/mt/mato-grosso/noticia/2025/12/16/video-tutor-solta-coleira-de-cao-rottweiler-que-corre-para-atacar-gato-em-terreno-baldio-em-mt.ghtml;G1;MT;;
 2877;2025-12-16 19:59:50;Defesa Civil envia alerta para chuva forte e cidade de SP entra em estado de atenção;https://g1.globo.com/sp/sao-paulo/noticia/2025/12/16/defesa-civil-envia-alerta-para-chuva-forte-e-cidade-de-sp-entra-em-estado-de-atencao.ghtml;G1;SP;;
+<<<<<<< HEAD
 3200;2025-12-16 19:50:13;Jogo do bicho: deputado Neno Razuk é condenado a 15 anos por organização criminosa;https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2025/12/16/jogo-do-bicho-deputado-neno-razuk-e-condenado-por-organizacao-criminosa-em-ms.ghtml;G1;MS;;
 2817;2025-12-16 19:47:34;"Suspeito de envolvimento em morte de influenciador digital é preso na Bahia; corpo da vítima foi encontrado com sinais de tortura";https://g1.globo.com/ba/bahia/noticia/2025/12/16/suspeito-de-envolvimento-em-morte-de-jovem-e-preso-na-bahia.ghtml;G1;BA;;
 3225;2025-12-16 19:45:14;Homem é condenado a mais de 50 anos de prisão pela morte de sargento reformado da PM;https://g1.globo.com/se/sergipe/noticia/2025/12/16/homem-e-condenado-a-mais-de-50-anos-de-prisao-pela-morte-de-sargento-reformado-da-pm-em-sergipe.ghtml;G1;SE;;
 3217;2025-12-16 19:44:36;TAP é condenada a indenizar brasileira que relatou tentativa de estupro em quarto disponibilizado pela empresa;https://g1.globo.com/turismo-e-viagem/noticia/2025/12/16/tap-condenada-indenizacao-brasileira-relato-tentativa-estupro.ghtml;G1;MG;;
+=======
+2817;2025-12-16 19:47:34;"Suspeito de envolvimento em morte de influenciador digital é preso na Bahia; corpo da vítima foi encontrado com sinais de tortura";https://g1.globo.com/ba/bahia/noticia/2025/12/16/suspeito-de-envolvimento-em-morte-de-jovem-e-preso-na-bahia.ghtml;G1;BA;;
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 2828;2025-12-16 19:41:55;Vice-prefeito de Terezópolis é demitido de cargo de médico em Anápolis por excesso de faltas, diz prefeitura;https://g1.globo.com/go/goias/noticia/2025/12/16/vice-prefeito-de-terezopolis-e-demitido-de-cargo-de-medico-em-anapolis-por-excesso-de-faltas-diz-prefeitura.ghtml;G1;GO;;
 2878;2025-12-16 19:41:50;Restaurante em Pinheiros está sem energia há 7 dias, acumula R$ 50 mil em prejuízos e cobra resposta da Enel;https://g1.globo.com/sp/sao-paulo/noticia/2025/12/16/restaurante-em-pinheiros-esta-sem-energia-ha-7-dias-acumula-r-50-mil-em-prejuizos-e-cobra-resposta-da-enel.ghtml;G1;SP;;
 3041;2025-12-16 19:35:49;Acidente aéreo que matou três estudantes e piloto completa 12 anos: 'já chorei muito hoje', diz pai;https://g1.globo.com/pi/piaui/noticia/2025/12/16/acidente-aereo-teresina.ghtml;G1;PI;;
@@ -375,7 +422,10 @@
 2844;2025-12-16 19:05:14;Mostra inédita em Belém reúne o olhar do premiado fotógrafo japonês Hiromi Nagakura e do líder indígena Ailton Krenak;https://g1.globo.com/pa/para/noticia/2025/12/16/mostra-em-belem-reune-o-olhar-do-premiado-fotografo-japones-hiromi-nagakura-e-do-lider-indigena-ailton-krenak.ghtml;G1;PA;;
 2838;2025-12-16 19:05:13;Homem morre afogado em lagoa de Esmeraldas;https://g1.globo.com/mg/minas-gerais/mg1/video/homem-morre-afogado-em-lagoa-na-cidade-de-esmeraldas-14184712.ghtml;G1;MG;;
 3062;2025-12-16 18:44:18;Elefanta africana morre 4 dias após diagnóstico de problema respiratório em santuário;https://g1.globo.com/mt/mato-grosso/noticia/2025/12/16/elefanta-africana-morre-3-dias-apos-diagnostico-de-problema-respiratorio-em-santuario-de-mt.ghtml;G1;MT;;
+<<<<<<< HEAD
 3214;2025-12-16 18:43:58;PF faz operação contra tráfico internacional de drogas com base em Alagoas;https://g1.globo.com/al/alagoas/noticia/2025/12/16/pf-faz-operacao-contra-trafico-internacional-de-drogas-com-base-em-alagoas.ghtml;G1;AL;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 2942;2025-12-16 18:14:45;Rua de lojas é interditada após rompimento de adutora e deixa trânsito congestionado;https://g1.globo.com/mt/mato-grosso/noticia/2025/12/16/rua-de-lojas-no-centro-de-cuiaba-e-interditada-apos-rompimento-de-adutora.ghtml;G1;MT;;
 2996;2025-12-16 18:14:34;Homem é preso após atirar serra elétrica contra mulher em João Pessoa;https://g1.globo.com/pb/paraiba/noticia/2025/12/16/homem-e-preso-apos-atirar-serra-eletrica-contra-mulher-durante-discussao-em-joao-pessoa.ghtml;G1;PB;;
 2930;2025-12-16 18:14:05;Mulher e comparsa são condenados a mais de 50 anos por morte de colono no Acre;https://g1.globo.com/ac/acre/noticia/2025/12/16/mulher-e-comparsa-sao-condenados-a-mais-de-50-anos-por-morte-de-colono-no-acre.ghtml;G1;AC;;
@@ -567,7 +617,10 @@
 2507;2025-12-16 14:19:11;Homem que pulou de carro levou polícia a descobrir outros dois sequestrados;https://g1.globo.com/ce/ceara/noticia/2025/12/15/homem-de-maos-atadas-que-pulou-de-carro-em-movimento-levou-policia-a-descobrir-outros-dois-sequestrados.ghtml;G1;CE;;
 2949;2025-12-16 14:15:22;Prefeito de Barreiros sofre novo acidente de ultraleve oito dias após fazer pouso forçado em praia;https://g1.globo.com/pe/pernambuco/noticia/2025/12/16/prefeito-de-barreiros-sofre-acidente-de-ultraleve-oito-dias-apos-fazer-pouso-forcado-em-praia.ghtml;G1;PE;;
 3035;2025-12-16 14:15:09;Caminhões atravessam nova ponte construída entre Tocantins e Maranhão após desabamento;https://g1.globo.com/to/tocantins/noticia/2025/12/16/caminhoes-atravessam-nova-ponte-construida-entre-tocantins-e-maranhao-apos-desabamento-video.ghtml;G1;TO;;
+<<<<<<< HEAD
 3202;2025-12-16 14:14:22;Morador ganha a companhia de vaca durante passeio por rua de Goiás e vídeo diverte a web;https://g1.globo.com/go/goias/noticia/2025/12/17/morador-ganha-a-companhia-de-vaca-durante-passeio-por-rua-de-goias-e-video-diverte-a-web.ghtml;G1;GO;;
+=======
+>>>>>>> 707e2af1686a7e5c3fd5dfefe0ac0fd37e2a2212
 2879;2025-12-16 14:05:50;Dois homens são presos suspeitos de tráfico de drogas em Aracaju;https://g1.globo.com/se/sergipe/noticia/2025/12/16/dois-homens-sao-presos-suspeitos-de-trafico-de-drogas-e-porte-ilegal-de-arma-em-aracaju.ghtml;G1;SE;;
 2868;2025-12-16 14:05:33;Nunes Marques pede mais 30 dias para analisar processo de cassação do governador de Roraima e vice;https://g1.globo.com/rr/roraima/noticia/2025/12/16/nunes-marques-pede-mais-30-dias-para-analisar-processo-de-cassacao-do-governador-de-roraima-e-vice.ghtml;G1;RR;;
 2862;2025-12-16 14:05:31;Passageiro de avião que caiu no RN deixou hospital sem receber alta médica;https://g1.globo.com/rn/rio-grande-do-norte/noticia/2025/12/16/passageiro-do-aviao-que-caiu-deixou-hospital.ghtml;G1;RN;;
