@@ -17,6 +17,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from export_for_streamlit import export_news_to_csv
 
+from plyer import notification
+
 # ----------------- Configuração de log -----------------
 
 logging.basicConfig(
@@ -272,12 +274,45 @@ def run_monitor_cycle(max_workers: int = 6) -> None:
 
     logger.info("Ciclo de monitoramento concluído.")
 
+    # Exporta CSV para o dashboard
     try:
-        export_news_to_csv()
+        csv_path, changed = export_news_to_csv()
     except Exception:
         logger.exception("Falha ao exportar CSV para o dashboard.")
     else:
-        logger.info("CSV exportado com sucesso (sem commit/push automático).")
+        if changed:
+            # Log bem chamativo
+            logger.warning(
+                "CSV atualizado em %s. LEMBRE-SE de fazer COMMIT + PUSH no VS Code "
+                "para atualizar o dashboard Streamlit.",
+                csv_path,
+            )
+
+            # Beep no Windows (opcional, mas bem chamativo)
+            try:
+                import winsound
+
+                winsound.Beep(1200, 500)
+                winsound.Beep(900, 500)
+            except Exception:
+                pass
+
+            # Notificação de sistema (opcional - requer 'pip install plyer')
+            try:
+                notification.notify(
+                    title="SCCT News – CSV atualizado",
+                    message="Novas notícias exportadas. Faça commit + push de "
+                            "dashboard/data/news_latest.csv no VS Code.",
+                    timeout=10,
+                )
+            except Exception:
+                # Se plyer não estiver instalado, só ignoramos
+                pass
+        else:
+            logger.info(
+                "CSV exportado, mas sem mudanças em relação à versão anterior "
+                "(nenhuma nova notícia encontrada)."
+            )
 
 
 if __name__ == "__main__":
