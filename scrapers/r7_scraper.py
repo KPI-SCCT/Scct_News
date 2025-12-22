@@ -4,6 +4,7 @@ from __future__ import annotations
 import logging
 from datetime import datetime
 from typing import List, Optional
+from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
@@ -47,42 +48,94 @@ class R7Scraper(BaseScraper):
     name = "R7"
     base_url = "https://noticias.r7.com/"
 
+    def _normalize_url(self, href: str) -> str:
+        """
+        Normaliza URLs do R7:
+        - converte URLs relativas para absolutas
+        - remove espaços extras
+        """
+        href = (href or "").strip()
+        if not href:
+            return ""
+        if href.startswith("/"):
+            return urljoin(self.base_url, href)
+        return href
+
     def fetch_from_url(
-        self, url: str, uf: Optional[str] = None, limit: int = 150
+        self,
+        url: str,
+        uf: Optional[str] = None,
+        limit: int = 150,
     ) -> List[NewsItem]:
-        # Se tiver UF, ajusta a URL para o formato de estado
+        # Se tiver UF e a URL for o domínio base, ajusta para a página do estado
         if uf:
             slug = R7_STATE_SLUGS.get(uf.upper())
             base_domain = self.base_url.rstrip("/")
-            if slug and url.rstrip("/") in {base_domain, base_domain + ""}:
+            # Se a URL for só o domínio base, troca pelo domínio do estado
+            if slug and url.rstrip("/") in {base_domain, base_domain.replace("www.", "")}:
                 url = f"{base_domain}/{slug}"
 
-        logger.info("Buscando notícias R7 em %s", url)
+        logger.info("Buscando notícias R7 em %s (UF=%s)", url, uf or "-")
 
         try:
             html = get_page_html(
                 url,
-                wait_selector="[data-tb-title='true']",
+                # Mais tolerante: qualquer elemento com data-tb-title,
+                # não só data-tb-title='true'
+                wait_selector="[data-tb-title]",
                 popup_handler=generic_popup_handler,
             )
-        except Exception as e:
-            logger.warning("Nenhum HTML retornado de %s, UF=%s", url, uf or "N/A")
+        except Exception:
+            logger.exception("Erro ao obter HTML do R7 em %s (UF=%s)", url, uf or "-")
             return []
 
         soup = BeautifulSoup(html, "html.parser")
         items: List[NewsItem] = []
-        seen_urls = set()
+        seen_urls: set[str] = set()
 
-        for h in soup.select("[data-tb-title='true'] a[href^='https://noticias.r7.com/']"):
-            href = h.get("href")
-            if not href or href in seen_urls:
+        # 1) Elementos "título" – em geral h3, mas pode ser outro tag
+        title_nodes = soup.select("[data-tb-title]")
+        logger.info(
+            "R7: encontrados %d nós com data-tb-title em %s",
+            len(title_nodes),
+            url,
+        )
+
+        for node in title_nodes:
+            # Caso o próprio elemento seja o <a> com href
+            if node.name == "a" and node.get("href"):
+                anchor = node
+            else:
+                anchor = node.find("a", href=True)
+
+            if not anchor:
                 continue
 
-            title = h.get("title") or h.get_text(strip=True)
+            href = self._normalize_url(anchor.get("href"))
+            if not href:
+                continue
+
+            # Garante que é link de notícia do R7
+            if "noticias.r7.com" not in href:
+                continue
+
+            if href in seen_urls:
+                continue
+
+            # Título: tenta title do <a>, depois do node, depois texto
+            title = (
+                anchor.get("title")
+                or node.get("title")
+                or anchor.get_text(strip=True)
+                or node.get_text(strip=True)
+            )
             if not title:
                 continue
 
-            if len(title) < 20:
+            title = title.strip()
+
+            # Filtro bem leve para evitar lixo, mas não matar títulos curtos
+            if len(title) < 8:
                 continue
 
             seen_urls.add(href)
@@ -92,7 +145,7 @@ class R7Scraper(BaseScraper):
                     title=title,
                     url=href,
                     source=self.name,
-                    published_at=datetime.utcnow(),
+                    published_at=datetime.utcnow(),  # se quiser, depois extraímos data real
                     uf=uf,
                 )
             )
@@ -100,5 +153,5 @@ class R7Scraper(BaseScraper):
             if len(items) >= limit:
                 break
 
-        logger.info("R7: %d notícias em %s", len(items), url)
+        logger.info("R7: %d notícias válidas extraídas de %s", len(items), url)
         return items
