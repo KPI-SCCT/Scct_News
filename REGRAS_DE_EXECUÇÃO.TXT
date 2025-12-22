@@ -1,0 +1,21 @@
+
+1 Passo
+# Execute o streamlit dentro do ambiente virtual do projeto (Fazendo isso você consegue disponibilizar a pagina para o pessoal no link https://monitor-de-noticias-scct-news.streamlit.app/).
+
+Algo parecido com isso:
+    (venv) C:\Users\4195952\OneDrive - MyFedEx\Documentos\Projetos\Scct_News_V2>streamlit run dashboard\streamlit_app.py
+
+2 Passo
+# Depois execute o app.py para fazer o monitoramento das noticias.
+
+Algo parecido com isso:
+    (venv) C:\Users\4195952\OneDrive - MyFedEx\Documentos\Projetos\Scct_News_V2>python app.py
+
+Extra
+# Caso o monitoramento não rode por agendamento, pode executar o monitor.py de tempos em tempos, para a atualização das noticias.
+
+
+Importante
+# Sempre que ouvir o bip do computador, ou conseguir, enxergar que as noticias foram atualizadas, precisa fazer o commit / push na extensão do VSCODE.
+    Só assim as noticias estaram atualizadas (em sincronia com o github + streamlit)
+
