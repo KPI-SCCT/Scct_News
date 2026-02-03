@@ -2,6 +2,10 @@
 from datetime import datetime, timedelta
 import csv
 import io
+import logging
+import sys
+import os
+import atexit
 
 from flask import (
     Flask,
@@ -13,8 +17,6 @@ from flask import (
     Response
 )
 
-import os
-import atexit
 from apscheduler.schedulers.background import BackgroundScheduler
 from sqlalchemy import func
 
@@ -56,6 +58,23 @@ UF_LIST = [
 ]
 
 MEDIA_SUGGESTIONS = ["G1", "CNN Brasil", "R7"]
+
+def setup_logging():
+    """Configura o logging para evitar erros no Windows"""
+    # Configurar logging básico
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.StreamHandler(sys.stdout)  # Usar stdout em vez de stderr
+        ]
+    )
+    
+    # Desabilitar logs coloridos do Werkzeug (causam problemas no Windows)
+    logging.getLogger('werkzeug').disabled = True
+    
+    # Reduzir verbosidade do APScheduler
+    logging.getLogger('apscheduler').setLevel(logging.WARNING)
 
 def parse_flexible_date(date_str: str) -> datetime | None:
     """
@@ -100,6 +119,9 @@ def build_news_query(session, uf, media, date_str):
     return query
 
 def create_app() -> Flask:
+    # Configurar logging primeiro
+    setup_logging()
+    
     app = Flask(
         __name__,
         template_folder=str(TEMPLATES_DIR),
