@@ -59,22 +59,50 @@ UF_LIST = [
 
 MEDIA_SUGGESTIONS = ["G1", "CNN Brasil", "R7"]
 
+class SafeStreamHandler(logging.StreamHandler):
+    """Handler de logging que ignora erros de flush no Windows"""
+    def flush(self):
+        try:
+            if self.stream and hasattr(self.stream, 'flush'):
+                self.stream.flush()
+        except (OSError, IOError):
+            # Ignorar erros de flush no Windows
+            pass
+
 def setup_logging():
-    """Configura o logging para evitar erros no Windows"""
-    # Configurar logging básico
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.StreamHandler(sys.stdout)  # Usar stdout em vez de stderr
-        ]
+    """Configura o logging globalmente para evitar erros no Windows"""
+    # Criar handler personalizado
+    handler = SafeStreamHandler(sys.stdout)
+    handler.setLevel(logging.INFO)
+    
+    # Formatar sem cores
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
     )
+    handler.setFormatter(formatter)
     
-    # Desabilitar logs coloridos do Werkzeug (causam problemas no Windows)
-    logging.getLogger('werkzeug').disabled = True
+    # Configurar logger raiz
+    root_logger = logging.getLogger()
+    root_logger.setLevel(logging.INFO)
     
-    # Reduzir verbosidade do APScheduler
+    # Remover handlers existentes
+    for hdlr in root_logger.handlers[:]:
+        root_logger.removeHandler(hdlr)
+    
+    root_logger.addHandler(handler)
+    
+    # Configurar loggers específicos
+    logging.getLogger('werkzeug').setLevel(logging.ERROR)
     logging.getLogger('apscheduler').setLevel(logging.WARNING)
+    logging.getLogger('urllib3').setLevel(logging.WARNING)
+    logging.getLogger('selenium').setLevel(logging.WARNING)
+    
+    # Forçar codificação UTF-8
+    if sys.platform == "win32":
+        import io
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 def parse_flexible_date(date_str: str) -> datetime | None:
     """
@@ -119,7 +147,7 @@ def build_news_query(session, uf, media, date_str):
     return query
 
 def create_app() -> Flask:
-    # Configurar logging primeiro
+    # Configurar logging global
     setup_logging()
     
     app = Flask(
@@ -540,5 +568,17 @@ def create_app() -> Flask:
 
 
 if __name__ == "__main__":
+    # Configurar logging global antes de criar o app
+    import logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[logging.StreamHandler(sys.stdout)]
+    )
+    
+    # Desabilitar cores ANSI no Windows
+    if sys.platform == "win32":
+        os.environ['PYTHONLEGACYWINDOWSSTDIO'] = '1'
+    
     app = create_app()
     app.run(host="0.0.0.0", port=5001, debug=True)
