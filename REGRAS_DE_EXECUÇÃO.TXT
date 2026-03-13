@@ -1,3 +1,4 @@
+https://monitor-de-noticias-scct-news.streamlit.app/
 
 1 Passo
 # Execute o streamlit dentro do ambiente virtual do projeto (Fazendo isso você consegue disponibilizar a pagina para o pessoal no link https://monitor-de-noticias-scct-news.streamlit.app/).
