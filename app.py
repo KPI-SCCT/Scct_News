@@ -1,5 +1,5 @@
 # app.py
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import csv
 import io
 import logging
@@ -279,7 +279,7 @@ def create_app() -> Flask:
             # Prefixo BOM para ajudar o Excel a reconhecer UTF-8 corretamente
             csv_data = "\ufeff" + csv_data
 
-            timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+            timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
             filename = f"noticias_{timestamp}.csv"
 
             return Response(
@@ -335,9 +335,9 @@ def create_app() -> Flask:
     # Rodar monitor manualmente
     @app.route("/run-monitor", methods=["POST"])
     def run_monitor():
-        start = datetime.utcnow()
+        start = datetime.now(timezone.utc)
         run_monitor_cycle()
-        duration = (datetime.utcnow() - start).total_seconds()
+        duration = (datetime.now(timezone.utc) - start).total_seconds()
         return redirect(
             url_for(
                 "index",

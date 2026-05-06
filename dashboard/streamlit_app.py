@@ -1,5 +1,5 @@
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 
 import pandas as pd
 import streamlit as st
@@ -302,7 +302,7 @@ def main():
         st.download_button(
             label="Exportar CSV (filtro atual)",
             data=to_csv_bytes(filtered),
-            file_name=f"noticias_filtradas_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.csv",
+            file_name=f"noticias_filtradas_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.csv",
             mime="text/csv",
         )
 
@@ -314,7 +314,7 @@ def main():
 
     st.dataframe(
         filtered[cols_show],
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
